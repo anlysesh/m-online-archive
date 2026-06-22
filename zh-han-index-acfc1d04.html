@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 · 信息聚合与内容发现</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+            color: #1e1e2a;
+            line-height: 1.6;
+            padding: 0 1.25rem;
+        }
+        .page {
+            max-width: 720px;
+            margin: 2.5rem auto 6rem;
+        }
+
+        /* ----- hero ----- */
+        .hero {
+            padding: 4.5rem 0 2.8rem 0;
+            border-bottom: 1px solid #eae9e6;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 560;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            color: #111;
+        }
+        .hero .sub {
+            font-size: 1.15rem;
+            color: #5a5a5f;
+            margin-top: 1rem;
+            max-width: 32em;
+        }
+
+        /* ----- 通用 ----- */
+        section {
+            padding: 2.8rem 0;
+            border-bottom: 1px solid #eae9e6;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 520;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.25rem;
+            color: #1b1b1f;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #2c2c32;
+        }
+
+        /* ----- 特点卡片网格 (优势区) ----- */
+        .grid-advantage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .card-advantage {
+            background: #ffffff;
+            border: 1px solid #e9e7e3;
+            border-radius: 20px;
+            padding: 1.5rem 1.25rem 1.25rem;
+            transition: box-shadow 0.15s, border-color 0.15s;
+        }
+        .card-advantage:hover {
+            border-color: #c7c3bc;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+        }
+        .card-advantage .title {
+            font-weight: 530;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #191a1d;
+        }
+        .card-advantage .desc {
+            color: #545459;
+            font-size: 0.94rem;
+            line-height: 1.5;
+        }
+
+        /* ----- 说明区: 场景式 ----- */
+        .scenario-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .scenario-list li {
+            padding: 0.9rem 0 0.9rem 1.2rem;
+            border-left: 3px solid #d1cec6;
+            margin-bottom: 0.5rem;
+            color: #2e2e34;
+        }
+        .scenario-list li strong {
+            font-weight: 530;
+            color: #111;
+        }
+
+        /* ----- FAQ 摘要 (简洁) ----- */
+        .faq-item {
+            margin-bottom: 1.6rem;
+        }
+        .faq-item .q {
+            font-weight: 510;
+            font-size: 1.03rem;
+            margin-bottom: 0.15rem;
+            color: #1f1f23;
+        }
+        .faq-item .a {
+            color: #55555b;
+            font-size: 0.95rem;
+        }
+
+        /* ----- 底部链接 ----- */
+        .site-footer {
+            padding: 2.5rem 0 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6d6b65;
+            border-top: 1px solid #e7e4de;
+            margin-top: 0.8rem;
+        }
+        .site-footer a {
+            color: #2f2f35;
+            text-decoration: none;
+            border-bottom: 1px solid #bdb9b0;
+            transition: border-color 0.2s;
+        }
+        .site-footer a:hover {
+            border-color: #111;
+        }
+
+        /* ----- 响应式 ----- */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .grid-advantage {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            section {
+                padding: 2rem 0;
+            }
+            .hero {
+                padding: 3rem 0 2rem;
+            }
+        }
+        @media (max-width: 440px) {
+            .page {
+                margin-top: 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 区 -->
+    <header class="hero">
+        <h1>雷速 · 发现内容的另一种方式</h1>
+        <p class="sub">
+            当你打开一个站点，最想先知道的是「这里能做什么」。  
+            <a href="https://zh-han-leisu.com" style="color:#1e1e2a; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; text-decoration-color: #bdb9b0;">雷速</a> 正是为这个直觉而构建——聚合信息、梳理脉络，带你直接抵达有价值的内容。
+        </p>
+    </header>
+
+    <!-- 优势区 (简洁卡片) -->
+    <section>
+        <h2>为什么你会觉得顺手</h2>
+        <div class="grid-advantage">
+            <div class="card-advantage">
+                <div class="title">一目了然的分类</div>
+                <div class="desc">关注点清晰，不必在页面里反复寻找。每个入口都指向明确的信息簇。</div>
+            </div>
+            <div class="card-advantage">
+                <div class="title">轻量，不拖沓</div>
+                <div class="desc">结构与阅读体验优先，没有无关的弹窗与横幅。你看到的就是你需要关心的。</div>
+            </div>
+            <div class="card-advantage">
+                <div class="title">内容优先的设计</div>
+                <div class="desc">字体、间距、层次都围绕可读性展开。即使第一次访问，也不会迷失在布局里。</div>
+            </div>
+            <div class="card-advantage">
+                <div class="title">持续更新的索引</div>
+                <div class="desc">站点内聚合的内容会保持刷新，帮助你对新话题保持感知。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区 (场景切入) -->
+    <section>
+        <h2>哪些时候你会想到打开它</h2>
+        <ul class="scenario-list">
+            <li><strong>想快速了解某个话题</strong> — 不用逐页翻找，<a href="https://zh-han-leisu.com" style="color:#1e1e2a; text-decoration: underline; text-underline-offset: 3px;">雷速</a> 已经为你梳理好了切入角度和关联内容。</li>
+            <li><strong>阅读间隙想获得新线索</strong> — 页面本身就像一份摘要卡片，提取关键点，让碎片时间产生价值。</li>
+            <li><strong>查找资料但不想被广告干扰</strong> — 干净的文字界面，让你专注在信息本身，而不是被推销打断节奏。</li>
+            <li><strong>想看看其他人关注什么</strong> — 聚合内容往往隐含着热度与趋势，你可以在其中找到值得深挖的方向。</li>
+        </ul>
+    </section>
+
+    <!-- FAQ 摘要 (三个简洁问答) -->
+    <section>
+        <h2>你可能想问的</h2>
+        <div class="faq-item">
+            <div class="q">这个网站是做什么的？</div>
+            <div class="a">它是一个内容聚合与索引站点，帮你在不同信息之间建立连接，节省你自己四处收集的时间。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">内容来自哪里？</div>
+            <div class="a">所有收录内容均有明确来源或合理引用，站点只承担整理与导览的角色，不改变原始信息的意思。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">需要注册或付费吗？</div>
+            <div class="a">完全不需要。打开页面即可浏览，没有任何使用门槛。</div>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.95rem; color: #5a5a5f;">
+            更多细节可以访问 <a href="https://zh-han-leisu.com" style="color:#1e1e2a; text-decoration: underline; text-underline-offset: 3px;">雷速</a> 直接了解。
+        </p>
+    </section>
+
+    <!-- 底部链接 -->
+    <footer class="site-footer">
+        <p style="margin-bottom: 0.3rem;">
+            <a href="https://zh-han-leisu.com">雷速</a> · 让信息找到你
+        </p>
+        <p style="font-size: 0.85rem;">&copy; 自然呈现 · 无夸大表述</p>
+    </footer>
+
+</div>
+</body>
+</html>
